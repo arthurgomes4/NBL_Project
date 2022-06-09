@@ -90,6 +90,10 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        lower_laser:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         main_body:
           Alpha: 1
           Show Axes: false
@@ -118,6 +122,10 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        upper_laser:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -141,6 +149,8 @@ Visualization Manager:
           Value: true
         lf_castor_wheel:
           Value: true
+        lower_laser:
+          Value: true
         main_body:
           Value: true
         map:
@@ -157,8 +167,10 @@ Visualization Manager:
           Value: true
         right_wheel:
           Value: true
+        upper_laser:
+          Value: true
       Marker Alpha: 1
-      Marker Scale: 0.6000000238418579
+      Marker Scale: 0.5
       Name: TF
       Show Arrows: true
       Show Axes: true
@@ -176,6 +188,8 @@ Visualization Manager:
                 lf_castor_base:
                   lf_castor_wheel:
                     {}
+                lower_laser:
+                  {}
                 rb_castor_base:
                   rb_castor_wheel:
                     {}
@@ -183,6 +197,8 @@ Visualization Manager:
                   rf_castor_wheel:
                     {}
                 right_wheel:
+                  {}
+                upper_laser:
                   {}
       Update Interval: 0
       Value: true
@@ -214,7 +230,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 4.017010688781738
+      Distance: 2.4024658203125
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1

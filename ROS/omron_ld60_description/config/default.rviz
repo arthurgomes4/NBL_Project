@@ -67,12 +67,11 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        left_back_small_wheel:
+        lb_castor_base:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        left_front_small_wheel:
+        lb_castor_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -82,17 +81,38 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        lf_castor_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        lf_castor_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        lower_laser:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         main_body:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        right_back_small_wheel:
+        rb_castor_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        rb_castor_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        right_front_small_wheel:
+        rf_castor_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        rf_castor_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -102,6 +122,10 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        upper_laser:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -115,22 +139,34 @@ Visualization Manager:
         All Enabled: true
         base_link:
           Value: true
-        left_back_small_wheel:
+        lb_castor_base:
           Value: true
-        left_front_small_wheel:
+        lb_castor_wheel:
           Value: true
         left_wheel:
           Value: true
+        lf_castor_base:
+          Value: true
+        lf_castor_wheel:
+          Value: true
+        lower_laser:
+          Value: true
         main_body:
           Value: true
-        right_back_small_wheel:
+        rb_castor_base:
           Value: true
-        right_front_small_wheel:
+        rb_castor_wheel:
+          Value: true
+        rf_castor_base:
+          Value: true
+        rf_castor_wheel:
           Value: true
         right_wheel:
           Value: true
+        upper_laser:
+          Value: true
       Marker Alpha: 1
-      Marker Scale: 0.5
+      Marker Scale: 0.30000001192092896
       Name: TF
       Show Arrows: true
       Show Axes: true
@@ -138,17 +174,25 @@ Visualization Manager:
       Tree:
         base_link:
           main_body:
-            left_back_small_wheel:
-              {}
-            left_front_small_wheel:
-              {}
+            lb_castor_base:
+              lb_castor_wheel:
+                {}
             left_wheel:
               {}
-            right_back_small_wheel:
+            lf_castor_base:
+              lf_castor_wheel:
+                {}
+            lower_laser:
               {}
-            right_front_small_wheel:
-              {}
+            rb_castor_base:
+              rb_castor_wheel:
+                {}
+            rf_castor_base:
+              rf_castor_wheel:
+                {}
             right_wheel:
+              {}
+            upper_laser:
               {}
       Update Interval: 0
       Value: true
@@ -180,7 +224,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.8979061841964722
+      Distance: 1.001585602760315
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -188,17 +232,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -0.07122540473937988
-        Y: -0.15827792882919312
-        Z: 0.24497152864933014
+        X: 0.03272398188710213
+        Y: -0.21746481955051422
+        Z: 0.17719966173171997
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: -0.5646015405654907
+      Pitch: 0.05039823800325394
       Target Frame: <Fixed Frame>
-      Yaw: 0.8603979349136353
+      Yaw: 0.8053959608078003
     Saved: ~
 Window Geometry:
   Displays:
