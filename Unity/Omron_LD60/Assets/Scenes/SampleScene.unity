@@ -2784,6 +2784,7 @@ GameObject:
   - component: {fileID: 1309837000}
   - component: {fileID: 1309836999}
   - component: {fileID: 1309837003}
+  - component: {fileID: 1309837004}
   m_Layer: 0
   m_Name: upper_laser
   m_TagString: Untagged
@@ -2927,8 +2928,23 @@ MonoBehaviour:
   ScanOffsetAfterPublish: 0
   NumMeasurementsPerScan: 50
   TimeBetweenMeasurementsSeconds: 0.001
-  LayerMaskName: TurtleBot3Manual
+  LayerMaskName: .
   FrameId: upper_laser
+--- !u!114 &1309837004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309836997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16302429be2008e47bd0a636c03d05f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Topic: /laser_scan
+  m_ID: 
+  m_Settings: {fileID: 11400000, guid: f53165fb8c4d340e3ad973ec7784242e, type: 2}
 --- !u!1 &1313400992
 GameObject:
   m_ObjectHideFlags: 8

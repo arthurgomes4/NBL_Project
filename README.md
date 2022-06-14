@@ -14,3 +14,21 @@ Nokia Bell Labs Project repo containing both unity project and required ROS pack
 5. Open up RVIZ with `roslaunch omron_ld60_description load_description.launch`
 
 6. Use teleop twist keyboard to move.
+
+## Lidar Specifics
+The lidar script is added as a component of the `upper_laser` link/childObject.
+
+<p align="left">
+<img src="./README_images/hierachy.png">
+</p>
+
+The publishing rate can be set in the inspector window.
+<p align="left">
+<img src="./README_images/lidar.png">
+</p>
+
+**Note**: Decreasing publishing period (increasing update rate) is not guaranteed to reflect in simulation. In the event that the actual publishing rate lags behind the set publishing rate this warning will be visible in the console window.
+
+<p align="left">
+<img src="./README_images/warning.png">
+</p>
