@@ -13,13 +13,15 @@ namespace RosSharp.Control
         public GameObject wheel2;
         public ControlMode mode = ControlMode.ROS;
 
+        public string topicName;
+
         private ArticulationBody wA1;
         private ArticulationBody wA2;
 
         public float maxLinearSpeed = 2; //  m/s
         public float maxRotationalSpeed = 1;//
-        public float wheelRadius = 0.033f; //meters
-        public float trackWidth = 0.288f; // meters Distance between tyres
+        public float wheelRadius = 0.088f; //meters
+        public float trackWidth = 0.39f; // meters Distance between tyres
         public float forceLimit = 10;
         public float damping = 10;
 
@@ -38,7 +40,7 @@ namespace RosSharp.Control
             SetParameters(wA1);
             SetParameters(wA2);
             ros = ROSConnection.GetOrCreateInstance();
-            ros.Subscribe<TwistMsg>("cmd_vel", ReceiveROSCmd);
+            ros.Subscribe<TwistMsg>(topicName, ReceiveROSCmd);
         }
 
         void ReceiveROSCmd(TwistMsg cmdVel)

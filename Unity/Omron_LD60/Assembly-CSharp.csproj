@@ -36,16 +36,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets/Scripts/LaserScanSensor.cs" />
      <Compile Include="Assets/Scripts/TimeStamp.cs" />
      <Compile Include="Assets/Scripts/ROSTransformTreePublisher.cs" />
      <Compile Include="Assets/Scripts/ROSClockPublisher.cs" />
      <Compile Include="Assets/Scripts/AGVController.cs" />
      <Compile Include="Assets/Scripts/TransformTreeNode.cs" />
      <Compile Include="Assets/Scripts/TransformExtensions.cs" />
+     <Compile Include="Assets/Scripts/ROSOdometryPublisher.cs" />
      <Compile Include="Assets/Scripts/Clock.cs" />
-     <Compile Include="Assets/Scripts/LaserScanSensor.cs" />
-     <None Include="Assets/Omron_LD60_ROS/omron_ld60_description/package.xml" />
-     <None Include="Assets/Omron_LD60_ROS/omron_ld60_description/CMakeLists.txt" />
     <Reference Include="UnityEngine">
         <HintPath>/home/arthur/Unity/Hub/Editor/2020.3.30f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -266,7 +265,7 @@
         <HintPath>/home/arthur/Unity/Hub/Editor/2020.3.30f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="AssimpNet">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/PackageCache/com.unity.robotics.urdf-importer@90f353e435/Runtime/UnityMeshImporter/Plugins/AssimpNet/AssimpNet.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/PackageCache/com.unity.robotics.urdf-importer@90f353e435/Runtime/UnityMeshImporter/Plugins/AssimpNet/AssimpNet.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>/home/arthur/Unity/Hub/Editor/2020.3.30f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -614,73 +613,73 @@
         <HintPath>/home/arthur/Unity/Hub/Editor/2020.3.30f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Robotics.ROSTCPConnector">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.Robotics.ROSTCPConnector.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.Robotics.ROSTCPConnector.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Robotics.UrdfImporter.Editor">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.Robotics.UrdfImporter.Editor.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.Robotics.UrdfImporter.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Sysroot.Linux_x86_64">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
     </Reference>
     <Reference Include="vhacd">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/vhacd.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/vhacd.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Robotics.UrdfImporter">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.Robotics.UrdfImporter.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.Robotics.UrdfImporter.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Robotics.Visualizations">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.Robotics.Visualizations.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.Robotics.Visualizations.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Robotics.ROSTCPConnector.Editor">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.Robotics.ROSTCPConnector.Editor.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.Robotics.ROSTCPConnector.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Robotics.Visualizations.Editor">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.Robotics.Visualizations.Editor.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.Robotics.Visualizations.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Toolchain.Linux-x86_64">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.Toolchain.Linux-x86_64.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.Toolchain.Linux-x86_64.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Robotics.ROSTCPConnector.Messages">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.Robotics.ROSTCPConnector.Messages.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.Robotics.ROSTCPConnector.Messages.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Robotics.ROSTCPConnector.MessageGeneration">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.Robotics.ROSTCPConnector.MessageGeneration.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.Robotics.ROSTCPConnector.MessageGeneration.dll</HintPath>
     </Reference>
     <Reference Include="Unity.SysrootPackage.Editor">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
-        <HintPath>/home/arthur/cheetos_ws/src/unity_resources/Omron_LD60/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
+        <HintPath>/home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

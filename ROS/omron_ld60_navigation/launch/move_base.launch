@@ -1,4 +1,9 @@
 <launch>
+
+  <arg name="cmd_vel_topic" default="/cmd_vel" />
+  <rosparam>
+    use_sim_time: true
+  </rosparam>
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <rosparam file="$(find omron_ld60_navigation)/params/costmap_common_params.yaml" command="load" ns="global_costmap"/>
     <rosparam file="$(find omron_ld60_navigation)/params/costmap_common_params.yaml" command="load" ns="local_costmap"/>
@@ -6,5 +11,6 @@
     <rosparam file="$(find omron_ld60_navigation)/params/global_costmap_params.yaml" command="load"/>
     <rosparam file="$(find omron_ld60_navigation)/params/base_local_planner_params.yaml" command="load"/>
     <rosparam file="$(find omron_ld60_navigation)/params/move_base_params.yaml" command="load"/>
+    <!-- <remap from="cmd_vel" to="$(arg cmd_vel_topic)"/> -->
   </node>
 </launch>
