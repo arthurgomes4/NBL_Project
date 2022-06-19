@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using RosMessageTypes.Sensor;
-using RosMessageTypes.Std;
-using RosMessageTypes.BuiltinInterfaces;
+using RosMessageTypes.Sensor;
+using RosMessageTypes.Geometry;
 using Unity.Robotics.Core;
 using UnityEngine;
 using Unity.Robotics.ROSTCPConnector;
@@ -20,30 +20,13 @@ public class IMU : MonoBehaviour
     private Vector3 _angularVelocity;
     private Vector3 _linearAcceleration;
 
-    private Noise.Gaussian gaussianNoise;
-    private Noise.Bias biasNoise;
-
     [SerializeField] private float _scanRate = 100f;
     public float scanRate { get => this._scanRate; }
-    
-    public bool enableGaussianNoise;
-    public bool enableBiasNoise;
-    public NoiseSetting setting = new NoiseSetting();
 
     public Vector4 GeometryQuaternion { get => _geometryQuaternion; }
     public Vector3 AngularVelocity { get => _angularVelocity; }
     public Vector3 LinearAcceleration { get => _linearAcceleration; }
 
-    [System.Serializable]
-    public class NoiseSetting
-    {
-        public Vector4 quatSigma;
-        public Vector4 quatBias;
-        public Vector3 angVelSigma;
-        public Vector3 angVelBias;
-        public Vector3 linAccSigma;
-        public Vector3 linAccBias;
-    }
 
     private void Start()
     {
@@ -70,58 +53,7 @@ public class IMU : MonoBehaviour
         this._geometryQuaternion = new Vector4(this._trans.rotation.x, this._trans.rotation.y, this._trans.rotation.z, this._trans.rotation.w);
         this._angularVelocity = -1 * this.transform.InverseTransformVector(this.GetComponent<Rigidbody>().angularVelocity);
         this._linearAcceleration = acceleration;
-
-        // Apply Gaussian Noise
-        // if (this.enableGaussianNoise) { this._geometryQuaternion = this.gaussianNoise.Apply(this._geometryQuaternion, this.setting.quatSigma); }
-        // if (this.enableGaussianNoise) { this._angularVelocity = this.gaussianNoise.Apply(this._angularVelocity, this.setting.angVelSigma); }
-        // if (this.enableGaussianNoise) { this._linearAcceleration = this.gaussianNoise.Apply(this._linearAcceleration, this.setting.linAccSigma); }
-
-        // // Apply Bias Noise
-        // if (this.enableBiasNoise) { this._geometryQuaternion = this.biasNoise.Apply(this._geometryQuaternion, this.setting.quatSigma); }
-        // if (this.enableBiasNoise) { this._angularVelocity = this.biasNoise.Apply(this._angularVelocity, this.setting.angVelSigma); }
-        // if (this.enableBiasNoise) { this._linearAcceleration = this.biasNoise.Apply(this._linearAcceleration, this.setting.linAccSigma); }
     }
-
-#if UNITY_EDITOR
-    [CustomEditor(typeof(IMU))]
-    public class IMUEditor : Editor
-    {
-        private IMU variables;
-
-        private void Awake()
-        {
-            this.variables = target as IMU;
-        }
-
-        public override void OnInspectorGUI()
-        {
-            EditorGUI.BeginChangeCheck();
-
-            this.variables.enableGaussianNoise = EditorGUILayout.ToggleLeft("Enable Gaussian Noise", this.variables.enableGaussianNoise);
-            if (this.variables.enableGaussianNoise)
-            {
-                EditorGUILayout.LabelField("Gaussian Noise Setting");
-                this.variables.setting.quatSigma = EditorGUILayout.Vector4Field("->Quaternion Sigma", this.variables.setting.quatSigma);
-                this.variables.setting.angVelSigma = EditorGUILayout.Vector3Field("->AngularVelocity Sigma", this.variables.setting.angVelSigma);
-                this.variables.setting.linAccSigma = EditorGUILayout.Vector3Field("->LinearAcceleration Sigma", this.variables.setting.linAccSigma);
-            }
-            this.variables.enableBiasNoise = EditorGUILayout.ToggleLeft("Enable Bias Noise", this.variables.enableBiasNoise);
-            if (this.variables.enableBiasNoise)
-            {
-                EditorGUILayout.LabelField("Bias Noise Setting");
-                this.variables.setting.quatBias = EditorGUILayout.Vector4Field("->Quaternion Bias", this.variables.setting.quatBias);
-                this.variables.setting.angVelBias = EditorGUILayout.Vector3Field("->AngularVelocity Bias", this.variables.setting.angVelBias);
-                this.variables.setting.linAccBias = EditorGUILayout.Vector3Field("->LinearAcceleration Bias", this.variables.setting.linAccBias);
-            }
-
-            if (EditorGUI.EndChangeCheck())
-            {
-                EditorUtility.SetDirty(this.variables);
-            }
-        }
-    }
-#endif
-
 }
 
 public class ImuPublisher : MonoBehaviour
@@ -140,7 +72,7 @@ public class ImuPublisher : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this._imu = GetComponent<IMU>{};
+        this._imu = GetComponent<IMU>();
 
         this._ros = ROSConnection.GetOrCreateInstance();
         this._ros.RegisterPublisher<ImuMsg>(this._topicName);
@@ -167,29 +99,27 @@ public class ImuPublisher : MonoBehaviour
             uint nanosec = (uint)((this._timeStamp - sec) * 1e+9);
             this._message.header.stamp.sec = sec;
             this._message.header.stamp.nanosec = nanosec;
-            Quaternion<FLU> orientation_ros = new Quaternion<FLU>(this._imu.GeometryQuaternion.x,
-                                                                  this._imu.GeometryQuaternion.y,
-                                                                  this._imu.GeometryQuaternion.z,
-                                                                  this._imu.GeometryQuaternion.w).To<FLU>();
+            
             QuaternionMsg orientation =
-                new QuaternionMsg(orientation_ros.x,
-                                  orientation_ros.y,
-                                  orientation_ros.z,
-                                  orientation_ros.w);
+                new QuaternionMsg(this._imu.GeometryQuaternion.x,
+                                  this._imu.GeometryQuaternion.y,
+                                  this._imu.GeometryQuaternion.z,
+                                  this._imu.GeometryQuaternion.w);
             this._message.orientation = orientation;
-            Vector3<FLU> angular_velocity_ros = new Vector3<FLU>(this._imu.AngularVelocity).To<FLU>();
+            
             Vector3Msg angular_velocity =
-                new Vector3Msg(angular_velocity_ros.x,
-                               angular_velocity_ros.y,
-                               angular_velocity_ros.z);
+                new Vector3Msg(this._imu.AngularVelocity.x,
+                               this._imu.AngularVelocity.y,
+                               this._imu.AngularVelocity.z);
             this._message.angular_velocity = angular_velocity;
-            Vector3<FLU> linear_acceleration_ros = new Vector3<FLU>(this._imu.LinearAcceleration).To<FLU>();
+
             Vector3Msg linear_acceleration =
-                new Vector3Msg(linear_acceleration_ros.x,
-                               linear_acceleration_ros.y,
-                               linear_acceleration_ros.z);
+                new Vector3Msg(this._imu.LinearAcceleration.x,
+                               this._imu.LinearAcceleration.y,
+                               this._imu.LinearAcceleration.z);
             this._message.linear_acceleration = linear_acceleration;
-            this._ros.Send(this._topicName, this._message);
+
+            this._ros.Publish(this._topicName, this._message);
         }
         
     }
