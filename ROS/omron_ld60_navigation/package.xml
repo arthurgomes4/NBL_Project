@@ -52,6 +52,9 @@
   <build_depend>move_base</build_depend>
   <build_export_depend>move_base</build_export_depend>
   <exec_depend>move_base</exec_depend>
+  <build_depend>gmapping</build_depend>
+  <build_export_depend>gmapping</build_export_depend>
+  <exec_depend>gmapping</exec_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->

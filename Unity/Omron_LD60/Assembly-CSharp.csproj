@@ -43,8 +43,8 @@
      <Compile Include="Assets/Scripts/AGVController.cs" />
      <Compile Include="Assets/Scripts/TransformTreeNode.cs" />
      <Compile Include="Assets/Scripts/TransformExtensions.cs" />
-     <Compile Include="Assets/Scripts/ROSOdometryPublisher.cs" />
      <Compile Include="Assets/Scripts/Clock.cs" />
+     <Compile Include="Assets/Scripts/ROSOdometryPublisher.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/home/arthur/Unity/Hub/Editor/2020.3.30f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
