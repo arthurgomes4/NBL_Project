@@ -5,7 +5,7 @@ Nokia Bell Labs Project repo containing both unity project and required ROS pack
 
 1. Clone into local workspace `src`. Build and source.
 
-2. Open the unity project [Omron_LD60](./Unity/Omron_LD60) from the Unity Hub. Using editor version **2020.3.30f1**.
+2. Open the unity project [Omron_LD60](./Unity/Omron_LD60) from the Unity Hub. Using editor version **2020.3.36f1**.
 
 3. Launch the TCP endpoint on the ROS side with `roslaunch ros_tcp_endpoint endpoint.launch`.
 

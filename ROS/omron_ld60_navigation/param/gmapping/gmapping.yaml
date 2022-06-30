@@ -4,8 +4,8 @@ map_frame: map
 
 map_update_interval: 0.1 # Publish new map
 
-maxUrange: 45.0 # Should be just less than sensor range
-maxRange: 55.0 # Should be just greater than sensor range
+maxUrange: 49.0 # Should be just less than sensor range
+maxRange: 51.0 # Should be just greater than sensor range
 particles: 100 # Increased from 80
 
 # Update frequencies
@@ -34,3 +34,5 @@ llsamplerange: 0.01
 llsamplestep: 0.01
 lasamplerange: 0.005
 lasamplestep: 0.005
+
+transform_publish_period: 0 # to disable tranform broadcasting set to 0

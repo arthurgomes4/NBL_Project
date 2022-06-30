@@ -4504,7 +4504,7 @@ MonoBehaviour:
   ScanAngleStartDegrees: 90
   ScanAngleEndDegrees: -90
   ScanOffsetAfterPublish: 0
-  NumMeasurementsPerScan: 30
+  NumMeasurementsPerScan: 75
   TimeBetweenMeasurementsSeconds: 0.001
   LayerMaskName: TurtleBot3Manual
   FrameId: upper_laser

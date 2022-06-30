@@ -1,6 +1,7 @@
 global_frame: map
 rolling_window: false
 track_unknown_space: true
+resolution: 0.05
 
 plugins:
   - {name: static,                  type: "costmap_2d::StaticLayer"}

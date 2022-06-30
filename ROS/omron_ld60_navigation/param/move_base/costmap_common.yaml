@@ -1,5 +1,5 @@
-footprint: [[-0.5, -0.33], [-0.5, 0.33], [0.5, 0.33], [0.5, -0.33]]
-footprint_padding: 0.01
+footprint: [[-0.4, -0.3], [-0.4, 0.3], [0.4, 0.3], [0.4, -0.30]]
+footprint_padding: 0.0
 
 robot_base_frame: base_link
 update_frequency: 4.0
@@ -8,8 +8,8 @@ transform_tolerance: 0.5
 
 resolution: 0.05
 
-obstacle_range: 5.5
-raytrace_range: 6.0
+obstacle_range: 45 # the default maximum distance from the robot at which an obstacle will be inserted into the cost map in meters
+raytrace_range: 51 # The default range in meters at which to raytrace out obstacles from the map using sensor data.
 
 #layer definitions
 static:
@@ -21,4 +21,5 @@ obstacles_laser:
     laser: {data_type: LaserScan, clearing: true, marking: true, topic: laser_scan, inf_is_valid: true}
 
 inflation:
-    inflation_radius: 1.0
+    inflation_radius: 1.3 # how far away zero cost point is from obstacle
+    cost_scaling_factor: 0.25 # inversely proportional to the cost of a cell. Setting it higher will make the decay curve more steep.
