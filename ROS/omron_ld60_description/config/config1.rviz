@@ -165,7 +165,7 @@ Visualization Manager:
       Position Transformer: XYZ
       Queue Size: 10
       Selectable: true
-      Size (Pixels): 10
+      Size (Pixels): 5
       Size (m): 1
       Style: Points
       Topic: /laser_scan
@@ -321,7 +321,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 28.47296714782715
+      Distance: 30.977909088134766
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -329,9 +329,9 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.2549619674682617
-        Y: -0.3542497456073761
-        Z: -4.960728168487549
+        X: 0.18146240711212158
+        Y: 0.15399567782878876
+        Z: -4.960812091827393
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false

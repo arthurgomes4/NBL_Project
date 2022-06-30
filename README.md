@@ -11,11 +11,9 @@ Nokia Bell Labs Project repo containing both unity project and required ROS pack
 
 4. Press the play button to run the scene in the Unity Editor.
 
-5. Open up RVIZ for visualization with `roslaunch omron_ld60_description load_description.launch`
+5. Launch Nav stack with `roslaunch omron_ld60_navigation omron_navigation_demo.launch`. This will launch move_base, gmapping, explore_lite. 
 
-6. Launch move base with `roslaunch omron_ld60_navigation move_base.launch`
-
-7. Launch gmapping with `roslaunch omron_ld60_navigation gmapping.launch`
+6. Open up RVIZ for visualization with `roslaunch omron_ld60_description load_description.launch`
 
 ## Lidar Specifics
 The lidar script is added as a component of the `upper_laser` childObject. All other scripts are components of the `ld60_castors` GameObject.
