@@ -1,9 +1,9 @@
 sceneSetups:
-- path: Assets/MainScene.unity
+- path: Assets/Scenes/MainScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
-- path: Assets/Scenes/HuskyScene.unity
+- path: Assets/Scenes/full_factory_scene.unity
   isLoaded: 1
   isActive: 0
   isSubScene: 0

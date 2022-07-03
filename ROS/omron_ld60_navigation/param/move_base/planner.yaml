@@ -54,8 +54,8 @@ DWAPlannerROS:
   latch_xy_goal_tolerance: true #If goal tolerance is latched, if the robot ever reaches the goal xy location it will simply rotate in place, even if it ends up outside the goal tolerance while it is doing so.
 
   # # Forward Simulation Parameters
-  sim_time: 4.0
-  sim_granularity: 0.075
+  sim_time: 2.5
+  sim_granularity: 0.025
   vx_samples: 20
   vy_samples: 0
   vtheta_samples: 40
