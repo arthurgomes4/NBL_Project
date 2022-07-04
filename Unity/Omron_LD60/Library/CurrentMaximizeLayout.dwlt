@@ -21,8 +21,8 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 941
-  m_MinSize: {x: 678, y: 321}
-  m_MaxSize: {x: 12003, y: 8021}
+  m_MinSize: {x: 678, y: 342}
+  m_MaxSize: {x: 12003, y: 8042}
   vertical: 0
   controlID: 15
 --- !u!114 &2
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_SerializedViewValues: []
   m_PlayModeViewName: GameView
   m_ShowGizmos: 0
-  m_TargetDisplay: 0
+  m_TargetDisplay: 2
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
   m_TargetSize: {x: 964, y: 628}
   m_TextureFilterMode: 0
@@ -135,8 +135,8 @@ MonoBehaviour:
     y: 0
     width: 1368
     height: 941
-  m_MinSize: {x: 402, y: 321}
-  m_MaxSize: {x: 8002, y: 8021}
+  m_MinSize: {x: 402, y: 342}
+  m_MaxSize: {x: 8002, y: 8042}
   vertical: 1
   controlID: 16
 --- !u!114 &4
@@ -220,7 +220,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 
+      m_ExpandedIDs: 70fbffff6a430000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -307,9 +307,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.21296519, y: -1.9834697, z: -0.46793273}
+    m_Target: {x: 12.272308, y: -2.0891044, z: 0.2810938}
     speed: 2
-    m_Value: {x: -0.21296519, y: -1.9834697, z: -0.46793273}
+    m_Value: {x: 12.272308, y: -2.0891044, z: 0.2810938}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -360,9 +360,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_Size:
-    m_Target: 10.694932
+    m_Target: 4.889172
     speed: 2
-    m_Value: 10.694932
+    m_Value: 4.889172
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -452,21 +452,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/materials
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/materials
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6a120100
-    m_LastClickedID: 70250
+    m_SelectedIDs: 70120100
+    m_LastClickedID: 70256
     m_ExpandedIDs: 000000006212010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
