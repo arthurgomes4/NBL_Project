@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637921631700000000
+      ticks: 637924532150000000
     m_Hash: 3045240461
   m_LockFileStatus:
     m_FilePath: /home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637921631700000000
+      ticks: 637924532150000000
     m_Hash: 3788230661
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}

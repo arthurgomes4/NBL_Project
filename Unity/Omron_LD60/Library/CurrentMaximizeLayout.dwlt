@@ -21,8 +21,8 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 941
-  m_MinSize: {x: 679, y: 342}
-  m_MaxSize: {x: 12004, y: 8042}
+  m_MinSize: {x: 678, y: 321}
+  m_MaxSize: {x: 12003, y: 8021}
   vertical: 0
   controlID: 15
 --- !u!114 &2
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_SerializedViewValues: []
   m_PlayModeViewName: GameView
   m_ShowGizmos: 0
-  m_TargetDisplay: 1
+  m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
   m_TargetSize: {x: 964, y: 628}
   m_TextureFilterMode: 0
@@ -135,8 +135,8 @@ MonoBehaviour:
     y: 0
     width: 1368
     height: 941
-  m_MinSize: {x: 403, y: 342}
-  m_MaxSize: {x: 8003, y: 8042}
+  m_MinSize: {x: 402, y: 321}
+  m_MaxSize: {x: 8002, y: 8021}
   vertical: 1
   controlID: 16
 --- !u!114 &4
@@ -160,8 +160,8 @@ MonoBehaviour:
     y: 0
     width: 1368
     height: 670
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
   controlID: 17
 --- !u!114 &5
@@ -183,8 +183,8 @@ MonoBehaviour:
     y: 0
     width: 402
     height: 670
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -220,7 +220,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 44b8f5ff3cd6f5ff86d6f5ff8ad6f5ff36e0f5ff44e0f5ff52e0f5ff56e0f5ff5ae0f5ff68e0f5ff76e0f5ff84e0f5ff92e0f5ffa0e0f5ffaee0f5ff9452f6ffde52f6ffe252f6ffea5df6ff345ef6ff385ef6ff4069f6ff8a69f6ff8e69f6ff4274f6ff9674f6ffe074f6ffe474f6ff3a85f6ffbeacffffec470000144f000028530000f65f00007e620000ea62000080710000de71000072720000b8790000a07e000006800000d4810000e48100004c860000f0870000268e0000eaa000007ea4000044a50000c8b400008cbe00006ac00000a4c60000c8d50000c4d6000046da0000badd00009ede000000e200005ee40000acee0000ec4b0400d0640400d067070052740700a877070044830700848b0700009807001aa1070030a3070062a30700ecad07005eae07005eb507005cb8070098c90700dacf0700aeda070068e307008ae4070028e80700e4e80700feea0700eaee07008ef10700d8f707001cf9070000fa0700c2ff0700a20008008c030800
+      m_ExpandedIDs: 
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -406,8 +406,8 @@ MonoBehaviour:
     y: 670
     width: 1368
     height: 271
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 10}
@@ -452,22 +452,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/materials
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /home/arthur/nbl_ws/src/NBL_Project/Unity/Omron_LD60
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9c0f0100
-    m_LastClickedID: 69532
-    m_ExpandedIDs: 00000000900f010000ca9a3b
+    m_SelectedIDs: 6a120100
+    m_LastClickedID: 70250
+    m_ExpandedIDs: 000000006212010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -495,7 +495,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000900f0100
+    m_ExpandedIDs: 0000000062120100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -539,7 +539,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 9}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
