@@ -4416,13 +4416,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topic: /laser_scan
-  PublishPeriodSeconds: 0.35
+  PublishPeriodSeconds: 0.3
   RangeMetersMin: 0
-  RangeMetersMax: 50
+  RangeMetersMax: 10
   ScanAngleStartDegrees: 90
   ScanAngleEndDegrees: -90
   ScanOffsetAfterPublish: 0
-  NumMeasurementsPerScan: 120
+  NumMeasurementsPerScan: 90
   TimeBetweenMeasurementsSeconds: 0.001
   LayerMaskName: TurtleBot3Manual
   FrameId: upper_laser

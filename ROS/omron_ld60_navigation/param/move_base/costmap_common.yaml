@@ -8,8 +8,8 @@ transform_tolerance: 0.5
 
 resolution: 0.05
 
-obstacle_range: 45 # the default maximum distance from the robot at which an obstacle will be inserted into the cost map in meters
-raytrace_range: 51 # The default range in meters at which to raytrace out obstacles from the map using sensor data.
+obstacle_range: 14.9 # the default maximum distance from the robot at which an obstacle will be inserted into the cost map in meters
+raytrace_range: 14.9 # The default range in meters at which to raytrace out obstacles from the map using sensor data.
 
 #layer definitions
 static:
@@ -22,4 +22,4 @@ obstacles_laser:
 
 inflation:
     inflation_radius: 1 # how far away zero cost point is from obstacle
-    cost_scaling_factor: 0.25 # inversely proportional to the cost of a cell. Setting it higher will make the decay curve more steep.
+    cost_scaling_factor: 0.5 # inversely proportional to the cost of a cell. Setting it higher will make the decay curve more steep.
