@@ -22,4 +22,4 @@ obstacles_laser:
 
 inflation:
     inflation_radius: 1 # how far away zero cost point is from obstacle
-    cost_scaling_factor: 0.25 # inversely proportional to the cost of a cell. Setting it higher will make the decay curve more steep.
+    cost_scaling_factor: 0.5 # inversely proportional to the cost of a cell. Setting it higher will make the decay curve more steep.
