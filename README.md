@@ -4,8 +4,10 @@
 # Unity-ROS Omron-LD60
 Nokia Bell Labs Project repo containing both unity project and required ROS packages
 
-## Branch
-This branch contains the full factory exploration scene.
+## Branchs
+**full_factory**- This branch contains the full factory exploration scene.
+**partial_factory**- This branch contains the exploration scene with half the factory layout for faster completion.
+**archive**- This branch contains several archived unity scenes.
 
 **Project Documented in wiki**
 
